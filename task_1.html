@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+
+    <style>
+        * 
+        body {
+            padding: 20px 50px;
+            background-color: #ececec;
+        }
+
+        .container {
+            background-color: #46B9FF;
+            padding: 10px;
+            text-align: center;
+            width: 800px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            margin-left: 200px;
+            border: 1px solid #000;
+
+        }
+
+        h1 {
+            width: 400px;
+            margin-left: 200px;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .input {
+            cursor: pointer;
+            padding: 9px;
+            width: 30vw;
+        }
+
+        .input-1 {
+            margin: 10px;
+            padding: 8px;
+        }
+        p {
+            font-size: 19px;
+            font-weight: bold;
+        }
+        .message-1{
+            font-size: 12px;
+            color:red;
+        }
+        .state{
+            font-size: 12px;
+        }
+        .phoneinput{
+            cursor: pointer;
+            padding: 4px;
+            width:50px;
+            font-size: 15px;
+        }
+        #provider_logo{
+            display: inline-block;
+        }
+        #submitbtn{
+            padding:6px;
+            background-color:greenyellow;
+            color:black;
+            cursor: pointer;
+            width: 80px;
+        }
+        #submit-message{
+            background-color:cadetblue;
+            padding: 10px 100px;
+            display: none;
+        }
+        #submit-message p{
+            font-size:15px;
+            color:black;
+        }
+        #otp{
+            padding:5px;
+        }
+        #validate{
+            padding:5px;
+            background-color: forestgreen;
+            color:white;
+        }
+        #pixel{
+            display: none;
+            background-color:cadetblue;
+            padding: 10px 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h1>Registration Form</h1>
+        <form action="#" id="form-id">
+            <!-- full Name -->
+            <p class="input-1" id="input-1">
+                <label for="fullname">
+                    Full Name:<br>
+                    <input class="input" type="text" name="fullname" id="fullname" maxlength="9" required>
+                </label>
+                <p id="message-1" class="message-1"></p>
+            </p>
+
+            <!-- email -->
+            <p class="input-1" id="input-2">
+                <label for="email">
+                    Email:<br><input class="input" type="email" name="email" id="email" required>
+                </label>
+                <p id="message-2" class="message-1"></p>
+            </p>
+            <!-- email -->
+
+
+             <!-- mobile -->
+            <p class="input-1" id="input-3">
+                <label for="mobile">
+                    Phone Number:<br>
+                    (<input class="phoneinput" type="text" size="3" maxlength="3" name="phone1" id="phone1" required onkeyup="jump001(this,'phone2')">)-
+                    <input class="phoneinput" type="text" size="3" maxlength="3" name="phone2" id="phone2" required onkeyup="jump001(this,'phone3')">-
+                    <input class="phoneinput" type="text" size="4" maxlength="4" name="phone3" id="phone3" required>
+
+                </label>
+                <span id="provider_logo">
+                </span>
+                <span id="state" class="state"></span>
+                <p id="message-3" class="message-1"></p>
+          
+            </p>
+
+             <!-- submit -->
+            <p class="input-1">
+                <input type="submit" id="submitbtn">
+            </p>
+        </form>
+      
+    </div>
+
+    <div id="submit-message">
+        <p id="form_p"></p>
+        <p>
+        Enter OTP:<input id="otp" type="text" name="otp" maxlength="4">
+        <button id="validate">Validate</button></p>
+        <p id="otp_message"></p>
+    </div>
+
+<script src="js/task_1.js"></script>
+<!-- <script src="js/task2.js"></script> -->
+
+
+</body>
+
+</html>
